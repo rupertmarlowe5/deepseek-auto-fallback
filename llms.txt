@@ -1,0 +1,8 @@
+# DeepSeek V4 Pro — Argolink
+
+- Model: deepseek-v4-pro
+- Intent: fallback and retry state machine
+- Model page: https://argolink.io/gh-deepseek-auto-fallback
+- API docs: https://argolink.io/gh-unified-api-docs
+- Examples: examples/request.sh, examples/client.py
+- Contract: docs/model-contract.md

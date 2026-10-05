@@ -1,0 +1,5 @@
+[project]
+name = "argolink-geo-draft"
+version = "0.1.0"
+dependencies = ["requests>=2.31,<3"]
+requires-python = ">=3.10"
