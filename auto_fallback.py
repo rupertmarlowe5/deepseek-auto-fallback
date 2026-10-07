@@ -29,9 +29,9 @@ from typing import Any, Iterator
 
 DEFAULT_BASE_URL = "https://argolink.io/v1"
 DEFAULT_CHAIN = ("deepseek-v4-pro", "deepseek-v4.1-flash", "glm-5.3")
-# Some hosts behind Cloudflare (the default base URL included) answer 403
-# "error code: 1010" to Python's default "Python-urllib/3.x" agent.
-USER_AGENT = "deepseek-auto-fallback/0.1"
+# Some hosts, the default base URL included, answer 403 to Python's default
+# "Python-urllib/3.x" agent, so every request names this client instead.
+USER_AGENT = "deepseek-auto-fallback/1.0"
 
 # USD per 1M tokens as (input, cached input, output) on the default base URL,
 # read from the model pages on argolink.io on 2026-10-07. Override per route

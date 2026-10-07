@@ -198,7 +198,7 @@ No, on purpose. After the first chunk the client raises `StreamInterrupted`; dec
 Only to cost estimates and to `is_deepseek_peak()`. The chain order changes only if you choose it by time, as in [examples/peak_aware.py](examples/peak_aware.py). Chinese public holidays are not modelled, so estimates on those days come out high.
 
 **Why does the client send its own User-Agent?**
-Some hosts behind Cloudflare, the default base URL among them, answer Python's default `Python-urllib/3.x` agent with `403` and the body `error code: 1010` before the request reaches the API. The client sends `deepseek-auto-fallback/0.1` instead. If you write your own `urllib` code, set a `User-Agent` header too.
+Some hosts, the default base URL among them, answer Python's default `Python-urllib/3.x` agent with `403` and the body `error code: 1010` before the request reaches the API. The client sends `deepseek-auto-fallback/1.0` instead. If you write your own `urllib` code, set a `User-Agent` header too.
 
 **Will GLM give the same answer as DeepSeek?**
 No. It is a different model; the fallback trades some consistency for availability. Keep the attempts list in your logs so you can tell which model wrote each answer.
