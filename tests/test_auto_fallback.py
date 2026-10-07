@@ -39,6 +39,7 @@ def api(monkeypatch):
 
     def urlopen(request, timeout=None):
         body = json.loads(request.data)
+        assert request.get_header("User-agent", "").startswith("deepseek-auto-fallback/")
         calls.append((request.full_url, body))
         step = script[body["model"]].pop(0)
         if isinstance(step, Exception):
