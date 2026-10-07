@@ -1,7 +1,6 @@
 __pycache__/
-*.py[cod]
-.env
-.env.*
-!.env.example
-node_modules/
+.pytest_cache/
+*.egg-info/
+build/
 dist/
+.env

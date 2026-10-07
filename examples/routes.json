@@ -1,0 +1,9 @@
+{
+  "routes": [
+    {"model": "deepseek-v4-pro", "retries": 1},
+    {"model": "deepseek-v4-pro", "base_url": "https://api.deepseek.com", "api_key_env": "DEEPSEEK_API_KEY",
+     "prices": [0.66, 0.022, 1.98], "retries": 0},
+    {"model": "deepseek-v4.1-flash", "retries": 1},
+    {"model": "glm-5.3", "params": {"reasoning_effort": "high"}, "retries": 0}
+  ]
+}

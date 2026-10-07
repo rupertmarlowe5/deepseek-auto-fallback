@@ -1,5 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "argolink-geo-draft"
+name = "deepseek-auto-fallback"
 version = "0.1.0"
-dependencies = ["requests>=2.31,<3"]
-requires-python = ">=3.10"
+description = "Retries and model fallback for DeepSeek V4 Chat Completions calls, standard library only"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+deepseek-fallback = "auto_fallback:main"
+
+[tool.setuptools]
+py-modules = ["auto_fallback"]
